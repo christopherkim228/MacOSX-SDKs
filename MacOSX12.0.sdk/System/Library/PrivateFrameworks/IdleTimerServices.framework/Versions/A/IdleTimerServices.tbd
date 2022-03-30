@@ -1,0 +1,27 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ x86_64-macos, x86_64-maccatalyst, arm64-macos, arm64-maccatalyst, 
+                   arm64e-macos, arm64e-maccatalyst ]
+uuids:
+  - target:          x86_64-macos
+    value:           74439603-FA68-3C51-83E8-2AB9571053EE
+  - target:          x86_64-maccatalyst
+    value:           74439603-FA68-3C51-83E8-2AB9571053EE
+  - target:          arm64-macos
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64-maccatalyst
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64e-macos
+    value:           40970741-8EF0-3140-ADB8-AC539818464E
+  - target:          arm64e-maccatalyst
+    value:           40970741-8EF0-3140-ADB8-AC539818464E
+install-name:    '/System/Library/PrivateFrameworks/IdleTimerServices.framework/Versions/A/IdleTimerServices'
+exports:
+  - targets:         [ x86_64-maccatalyst, x86_64-macos, arm64e-maccatalyst, arm64e-macos, 
+                       arm64-macos, arm64-maccatalyst ]
+    symbols:         [ _ITIdleTimerServicesConfigurationErrorDomain, _ITLogIdleTimer, 
+                       _ITLoggingSubsystem, _IdleTimerServicesVersionNumber, _IdleTimerServicesVersionString ]
+    objc-classes:    [ ITIdleTimerAssertion, ITIdleTimerConfiguration, ITIdleTimerIOKitHandler, 
+                       ITIdleTimerServiceProvider, ITIdleTimerState, ITIdleTimerStateClient, 
+                       ITIdleTimerStateModel, ITIdleTimerStateService ]
+...

@@ -1,0 +1,19 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ x86_64-maccatalyst, arm64-maccatalyst, arm64e-maccatalyst ]
+uuids:
+  - target:          x86_64-maccatalyst
+    value:           DE85EA6B-9BAF-340E-B21B-9B4FDC00C6AD
+  - target:          arm64-maccatalyst
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64e-maccatalyst
+    value:           343BBCAA-97F9-320F-BE2A-E1DFCE3311B1
+install-name:    '/System/iOSSupport/System/Library/Frameworks/UserNotificationsUI.framework/Versions/A/UserNotificationsUI'
+exports:
+  - targets:         [ x86_64-maccatalyst, arm64e-maccatalyst, arm64-maccatalyst ]
+    symbols:         [ _UNAppLaunchOriginContentExtension, _UNLogExtensions, _UNLogExtensionsHost, 
+                       _UNLogExtensionsService, _UNRegisterUserNotificationsUILogging, 
+                       __UNNotificationExtensionActionsKey ]
+    objc-classes:    [ _UNNotificationContentExtensionHostContainerViewController, 
+                       _UNNotificationContentExtensionHostContext, _UNNotificationContentExtensionManager ]
+...

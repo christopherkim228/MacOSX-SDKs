@@ -1,0 +1,21 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ x86_64-macos, arm64-macos, arm64e-macos ]
+uuids:
+  - target:          x86_64-macos
+    value:           A06648E8-DDD5-3C36-A1A4-9F7CCA3764C1
+  - target:          arm64-macos
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64e-macos
+    value:           D716C7EC-A9D9-334C-A9D9-7D20484C5107
+install-name:    '/System/Library/PrivateFrameworks/Shortcut.framework/Versions/A/Shortcut'
+current-version: 118
+exports:
+  - targets:         [ x86_64-macos, arm64e-macos, arm64-macos ]
+    symbols:         [ _SCTHideHelpPointerForItem, _SCTInitShortcut, _SCTIsDefaultHelpBookSearchEnabled, 
+                       _SCTRegisterSearchHandler, _SCTSetDefaultHelpBookSearchEnabled, 
+                       _SCTShowHelpPointerForItem, _SCTToggleHelpMenu, _SCTUnregisterSearchHandler, 
+                       _SCTUserInterfaceItemPerformActionForItem, _SCTUserInterfaceItemRangeOfStringMatching, 
+                       _SCTUserInterfaceItemSearchScreenRectForItem, _SCTUserInterfaceItemSearchTitleForItem, 
+                       _SCTUserInterfaceItemShowItem ]
+...

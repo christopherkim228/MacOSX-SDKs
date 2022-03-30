@@ -1,0 +1,26 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ x86_64-macos, arm64-macos, arm64e-macos ]
+uuids:
+  - target:          x86_64-macos
+    value:           A944C709-00A8-3ABF-BA13-83B8CA5846B9
+  - target:          arm64-macos
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64e-macos
+    value:           25ECD458-2A44-36DC-8993-F82EE4315441
+install-name:    '/System/Library/PrivateFrameworks/CardKit.framework/Versions/A/CardKit'
+exports:
+  - targets:         [ x86_64-macos, arm64e-macos, arm64-macos ]
+    symbols:         [ _CRKIsLargeDevice, _CRKIsRTL, _CardKitVersionNumber, _CardKitVersionString, 
+                       __CRKIsRTLWithApp, __CRKSystemRootDirectory ]
+    objc-classes:    [ CRKCardPresentation, CRKCardPresentationConfiguration, CRKCardSectionViewConfiguration, 
+                       CRKCardSectionViewController, CRKCardViewController, CRKComposedStackView, 
+                       CRKComposedView, CRKContainerCardSectionView, CRKIdentifiedProviderRegistry, 
+                       CRKKeyline, _CRKBuiltInProvider, _CRKBundleIdentifiedCardSectionViewProvider, 
+                       _CRKBundleManager, _CRKCardSectionViewControllerFactory, _CRKCardSectionViewControllerRegistry, 
+                       _CRKCardSectionViewLoader, _CRKCardViewControllerTransitionAnimator, 
+                       _CRKCardViewControllerTransitionCoordinator, _CRKDebugOverlayView, 
+                       _CRKHitTestPassThroughView, _CRKImageLoader, _CRKProviderBundle, 
+                       _CRKProviderBundleManager, _CRKSectionShuffleTransitionAnimator, 
+                       _CRKSendMessageCardFactory ]
+...

@@ -1,0 +1,19 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ x86_64-macos, arm64-macos, arm64e-macos ]
+uuids:
+  - target:          x86_64-macos
+    value:           B60834C4-319D-32D6-AA51-124DFB015CA9
+  - target:          arm64-macos
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64e-macos
+    value:           87479E8B-9001-3525-9A15-A2DA49A0C2D1
+install-name:    '/System/Library/PrivateFrameworks/WatchdogClient.framework/Versions/A/WatchdogClient'
+current-version: 125
+compatibility-version: 0
+exports:
+  - targets:         [ x86_64-macos, arm64e-macos, arm64-macos ]
+    symbols:         [ _wd_endpoint_activate, _wd_endpoint_add_queue, _wd_endpoint_add_work_processor, 
+                       _wd_endpoint_begin_watchdog_monitoring_for_service, _wd_endpoint_disable_monitoring_for_service, 
+                       _wd_endpoint_register, _wd_endpoint_set_alive_func, _wd_endpoint_set_platform_controller ]
+...

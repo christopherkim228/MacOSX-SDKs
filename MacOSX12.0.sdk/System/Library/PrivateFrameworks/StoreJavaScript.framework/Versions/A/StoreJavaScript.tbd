@@ -1,0 +1,30 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ x86_64-macos, arm64-macos, arm64e-macos ]
+uuids:
+  - target:          x86_64-macos
+    value:           8BE7D03B-670D-3723-97AE-33F1B6243815
+  - target:          arm64-macos
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64e-macos
+    value:           C9DA9C1B-4ED5-3A67-AD45-1358BAD17944
+install-name:    '/System/Library/PrivateFrameworks/StoreJavaScript.framework/Versions/A/StoreJavaScript'
+current-version: 379
+exports:
+  - targets:         [ x86_64-macos, arm64e-macos, arm64-macos ]
+    symbols:         [ _FRBundleDispatchEventMessage, _FRBundleDispatchEventName, 
+                       _FRBundleDispatchEventObject, _FRBundleDispatchGlobalEventMessage, 
+                       _FRBundleDispatchGlobalEventName, _FRBundleDispatchGlobalEventObject, 
+                       _FRClientDismissedContextMenu, _FRClientSelectedContextMenu, 
+                       _FRClientSelectedContextMenuTitle, _FRJSActionKey, _FRJSFunctionArgumentsKey, 
+                       _FRJSFunctionCallAction, _FRJSFunctionUnprotectAction, _FRJSLogObject, 
+                       _FRJSObjectActionKey, _FRJSObjectAddFunctionAction, _FRJSObjectAddPropertyAction, 
+                       _FRJSObjectCallFunctionAction, _FRJSObjectFunctionArgumentsKey, 
+                       _FRJSObjectFunctionNameKey, _FRJSObjectGetPropertyAction, 
+                       _FRJSObjectIdentifierKey, _FRJSObjectPropertyNameKey, _FRJSObjectPropertyValueKey, 
+                       _FRJSObjectSetPropertyAction, _FRJSObjectUnprotectAction, 
+                       _JSInvalidateJSLogEnabledCache, _JSLogEnabled, __JSValueToNSObject, 
+                       __NSObjectToJSValue, __contextMenuName, _didCreatePage, _didReceiveMessage, 
+                       _globalObjectIsAvailableForFrame, _willDestroyPage ]
+    objc-classes:    [ FRBundleInterface, FRJSFunction, FRJSObject, FRWKBundleMessage ]
+...

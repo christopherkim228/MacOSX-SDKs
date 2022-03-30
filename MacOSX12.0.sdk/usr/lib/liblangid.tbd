@@ -1,0 +1,27 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ x86_64-macos, x86_64-maccatalyst, arm64-macos, arm64-maccatalyst, 
+                   arm64e-macos, arm64e-maccatalyst ]
+uuids:
+  - target:          x86_64-macos
+    value:           ECC7E710-3446-348B-ACE4-E137265C49A7
+  - target:          x86_64-maccatalyst
+    value:           ECC7E710-3446-348B-ACE4-E137265C49A7
+  - target:          arm64-macos
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64-maccatalyst
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64e-macos
+    value:           C35E6442-4EEE-3D59-8412-9EF24251784F
+  - target:          arm64e-maccatalyst
+    value:           C35E6442-4EEE-3D59-8412-9EF24251784F
+install-name:    '/usr/lib/liblangid.dylib'
+exports:
+  - targets:         [ arm64e-macos, x86_64-macos, x86_64-maccatalyst, arm64e-maccatalyst, 
+                       arm64-macos, arm64-maccatalyst ]
+    symbols:         [ _langid_consume_string, _langid_create, _langid_create_with_datapath, 
+                       _langid_dispose, _langid_global_dispose, _langid_highest_score, 
+                       _langid_identify, _langid_identify_bufsize, _langid_identify_withbuf, 
+                       _langid_languagecode, _langid_numlanguages, _langid_reset, 
+                       _textcat_Classify, _textcat_Init ]
+...

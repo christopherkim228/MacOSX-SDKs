@@ -1,0 +1,19 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ x86_64-macos, arm64-macos, arm64e-macos ]
+uuids:
+  - target:          x86_64-macos
+    value:           3C61A4DE-83CD-3991-8A63-C4191BE8DF25
+  - target:          arm64-macos
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64e-macos
+    value:           423295C6-388F-3515-BC30-458EB002D23C
+install-name:    '/System/Library/PrivateFrameworks/SearchSuggestions.framework/Versions/A/SearchSuggestions'
+exports:
+  - targets:         [ x86_64-macos, arm64e-macos, arm64-macos ]
+    symbols:         [ _SGTLocalizedSuggestion, _SGTNormalizedQueryString, _SGTNormalizedQueryStringIgnoreDiacritics, 
+                       _SGTSearchSuggestionsErrorDomain, _SGTSearchSuggestionsSupportedScopes, 
+                       _SearchSuggestionsVersionNumber, _SearchSuggestionsVersionString, 
+                       _splitCounts ]
+    objc-classes:    [ SGTSearchSuggestions ]
+...

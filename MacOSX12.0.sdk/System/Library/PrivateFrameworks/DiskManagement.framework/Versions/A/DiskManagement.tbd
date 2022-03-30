@@ -1,0 +1,29 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ x86_64-macos, arm64-macos, arm64e-macos ]
+uuids:
+  - target:          x86_64-macos
+    value:           BD37ECA7-34E0-33E7-B38F-EA3EF0B718C8
+  - target:          arm64-macos
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64e-macos
+    value:           DC9D0CE2-2D21-3E3C-A369-74E9C7B1B5EF
+install-name:    '/System/Library/PrivateFrameworks/DiskManagement.framework/Versions/A/DiskManagement'
+exports:
+  - targets:         [ x86_64-macos, arm64e-macos, arm64-macos ]
+    symbols:         [ _DMDiskManagementToolDiedNotification, _DMLocalizedUserErrorString, 
+                       _DMMediaTypeCDROM, _DMMediaTypeDVDROM, _DMMediaTypeGeneric, 
+                       _DMMediaTypeIPod, _DMMediaTypeXsanComponent, _DMMediaTypeXsanFilesystem, 
+                       _DMNSError, _DMOpticalMediaTypeBDR, _DMOpticalMediaTypeBDRE, 
+                       _DMOpticalMediaTypeBDROM, _DMOpticalMediaTypeCDR, _DMOpticalMediaTypeCDROM, 
+                       _DMOpticalMediaTypeCDRW, _DMOpticalMediaTypeDVDPlusRDoubleLayer, 
+                       _DMOpticalMediaTypeDVDR, _DMOpticalMediaTypeDVDRAM, _DMOpticalMediaTypeDVDRDualLayer, 
+                       _DMOpticalMediaTypeDVDROM, _DMOpticalMediaTypeDVDRW, _DMOpticalMediaTypeDVDplusR, 
+                       _DMOpticalMediaTypeDVDplusRW, _DMOpticalMediaTypeHDDVDR, _DMOpticalMediaTypeHDDVDRAM, 
+                       _DMOpticalMediaTypeHDDVDROM, _DMProtocolATA, _DMProtocolATAPI, 
+                       _DMProtocolDiskImage, _DMProtocolFibreChannel, _DMProtocolFireWire, 
+                       _DMProtocolSAS, _DMProtocolSATA, _DMProtocolSCSI, _DMProtocolUSB, 
+                       _DMUnlocalizedTechnicalErrorString ]
+    objc-classes:    [ DMAPFS, DMAppleRAID, DMCoreStorage, DMEraseDisk, DMFilesystem, 
+                       DMManager, DMPartitionDisk, DMRepairDisk ]
+...

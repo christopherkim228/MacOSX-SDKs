@@ -1,0 +1,27 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ x86_64-macos, x86_64-maccatalyst, arm64-macos, arm64-maccatalyst, 
+                   arm64e-macos, arm64e-maccatalyst ]
+uuids:
+  - target:          x86_64-macos
+    value:           FD17571E-556D-37AD-9FB1-9D4517678C10
+  - target:          x86_64-maccatalyst
+    value:           FD17571E-556D-37AD-9FB1-9D4517678C10
+  - target:          arm64-macos
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64-maccatalyst
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64e-macos
+    value:           C2011C5D-FFAC-3253-A2E0-21911AFD4E4C
+  - target:          arm64e-maccatalyst
+    value:           C2011C5D-FFAC-3253-A2E0-21911AFD4E4C
+install-name:    '/usr/lib/libdscsym.dylib'
+current-version: 301
+exports:
+  - targets:         [ arm64e-macos, x86_64-macos, x86_64-maccatalyst, arm64e-maccatalyst, 
+                       arm64-macos, arm64-maccatalyst ]
+    symbols:         [ _dscsym_buffer_iterate, _dscsym_buffer_iterate_binaries, _dscsym_copy_dscsym_files, 
+                       _dscsym_generate_dscsym_file, _dscsym_iterate, _dscsym_iterate_binaries, 
+                       _dscsym_iterate_buffer, _dscsym_mmap_dscsym_for_uuid, _dscsym_save_dscsyms_for_current_caches, 
+                       _dscsym_uuid_iterate ]
+...

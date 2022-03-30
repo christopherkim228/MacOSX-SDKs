@@ -1,0 +1,35 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ x86_64-macos, arm64-macos, arm64e-macos ]
+uuids:
+  - target:          x86_64-macos
+    value:           78AA4458-039C-39A2-BC8B-B01029D037F9
+  - target:          arm64-macos
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64e-macos
+    value:           622273A1-D527-35EE-8414-B4C823CCE60E
+install-name:    '/System/Library/PrivateFrameworks/VisionKit.framework/Versions/A/VisionKit'
+reexported-libraries:
+  - targets:         [ x86_64-macos, arm64-macos, arm64e-macos ]
+    libraries:       [ '/System/Library/PrivateFrameworks/DocumentCamera.framework/Versions/A/DocumentCamera' ]
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ x86_64-macos, arm64-macos, arm64e-macos ]
+uuids:
+  - target:          x86_64-macos
+    value:           B6DBBA41-70E3-3D6C-9C63-EAD0AB9CF810
+  - target:          arm64-macos
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64e-macos
+    value:           AC0009CE-4030-39F7-96DC-ADF152A8EAD2
+install-name:    '/System/Library/PrivateFrameworks/DocumentCamera.framework/Versions/A/DocumentCamera'
+current-version: 91
+exports:
+  - targets:         [ x86_64-macos, arm64e-macos, arm64-macos ]
+    symbols:         [ _DCScanWasDeletedNotification, _DCTransformFromImageOrientation, 
+                       _dc_clockwiseRotationsFromUpToMatchOrientation, _dc_counterClockwiseRotationsFromUpToMatchOrientation, 
+                       _dc_nonLocalizedOrientationNameForType, _dc_orientationByRotatingLeft, 
+                       _dc_orientationByRotatingRight, _dc_orientationFromNonLocalizedName, 
+                       _kICDocCamImageQuadPerspectiveCorrectImageInset ]
+    objc-classes:    [ DCNotesSPI, ICDocCamImageFilters, ICDocCamImageQuad ]
+...

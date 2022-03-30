@@ -1,0 +1,24 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ x86_64-macos, arm64-macos, arm64e-macos ]
+uuids:
+  - target:          x86_64-macos
+    value:           8389F271-58CC-343D-9810-0113A79ACAF8
+  - target:          arm64-macos
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64e-macos
+    value:           459CE2C0-B020-3C9F-81E6-0204550FC952
+install-name:    '/System/Library/Frameworks/LocalAuthentication.framework/Support/DaemonUtils.framework/Versions/A/DaemonUtils'
+current-version: 983
+exports:
+  - targets:         [ x86_64-macos, arm64e-macos, arm64-macos ]
+    symbols:         [ _LANVRAMNamespaceStartupManager ]
+    objc-classes:    [ AirDb, BiometryHelper, Caller, CredentialRequest, DaemonUtils, 
+                       EvaluationRequest, InstalledAppsCache, LADFROwnerToken, LANVRAM, 
+                       LASIORemoteCall, LASecureIO, LASecureIOArchive, LASecureIOCommunication, 
+                       LASecureIOHelper, LASecureIOLoggingHelper, PushButtonMonitor, 
+                       Request, TrustedAccessoryHelper, WatchMonitor ]
+  - targets:         [ arm64e-macos, arm64-macos ]
+    objc-classes:    [ LASecureIOAsset, LASecureIODisplay, LASecureIOLocal, LASecureIOScene, 
+                       LASecureIOServer, LASecureIOTouchBarView, LASecureIOUtils ]
+...

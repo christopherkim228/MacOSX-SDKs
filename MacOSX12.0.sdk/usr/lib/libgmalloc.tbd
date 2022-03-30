@@ -1,0 +1,19 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ x86_64-macos, x86_64-maccatalyst, arm64-macos, arm64-maccatalyst, 
+                   arm64e-macos, arm64e-maccatalyst ]
+uuids:
+  - target:          x86_64-macos
+    value:           BFD3FB4C-AF20-3679-83A0-3FF8FD485D34
+  - target:          x86_64-maccatalyst
+    value:           BFD3FB4C-AF20-3679-83A0-3FF8FD485D34
+  - target:          arm64-macos
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64-maccatalyst
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64e-macos
+    value:           10A02B9E-63C8-3EF7-8E7C-08206707449A
+  - target:          arm64e-maccatalyst
+    value:           10A02B9E-63C8-3EF7-8E7C-08206707449A
+install-name:    '/usr/lib/libgmalloc.dylib'
+...

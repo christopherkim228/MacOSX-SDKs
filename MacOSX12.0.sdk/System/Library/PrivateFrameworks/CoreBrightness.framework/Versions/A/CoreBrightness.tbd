@@ -1,0 +1,36 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ x86_64-macos, x86_64-maccatalyst, arm64-macos, arm64-maccatalyst, 
+                   arm64e-macos, arm64e-maccatalyst ]
+uuids:
+  - target:          x86_64-macos
+    value:           698D0A1E-89AA-31AD-AE1F-2797CCD56465
+  - target:          x86_64-maccatalyst
+    value:           698D0A1E-89AA-31AD-AE1F-2797CCD56465
+  - target:          arm64-macos
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64-maccatalyst
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64e-macos
+    value:           F6E5C644-A663-3CE1-B9C6-9C8B066039B5
+  - target:          arm64e-maccatalyst
+    value:           F6E5C644-A663-3CE1-B9C6-9C8B066039B5
+install-name:    '/System/Library/PrivateFrameworks/CoreBrightness.framework/Versions/A/CoreBrightness'
+exports:
+  - targets:         [ x86_64-maccatalyst, x86_64-macos, arm64e-maccatalyst, arm64e-macos, 
+                       arm64-macos, arm64-maccatalyst ]
+    symbols:         [ _CBALCALSCopyALSServiceClient, _CBALCDisplayFeatureAvailable, 
+                       _CBALCGetBoolPreferenceForKey, _CBALCGetDictPreferenceForKey, 
+                       _CBALCGetDisplayAutoBrightnessEnabled, _CBALCGetFloatPreferenceForKey, 
+                       _CBALCGetIntPreferenceForKey, _CBALCGetKeyboardAutoBrightnessEnabled, 
+                       _CBALCGetKeyboardDimTime, _CBALCKeyboardFeatureAvailable, 
+                       _CBALCLGPVersion, _CBALCRegisterALSPluginCallback, _CBALCSetBoolPreferenceForKey, 
+                       _CBALCSetDictPreferenceForKey, _CBALCSetDictionary, _CBALCSetDisplayAutoBrightnessEnabled, 
+                       _CBALCSetFloatPreferenceForKey, _CBALCSetIntPreferenceForKey, 
+                       _CBALCSetKeyboardAutoBrightnessEnabled, _CBALCSetKeyboardDimTime, 
+                       _CBALCUnregisterALSPluginCallback, _kKBIDBuiltIn, _kKBIDDefault, 
+                       _kKBIDPrimary, _kKBIDSecondary ]
+    objc-classes:    [ BrightnessSystem, BrightnessSystemClient, BrightnessSystemClientInternal, 
+                       CBAdaptationClient, CBBlueLightClient, CBClient, CBKeyboardPreferencesManager, 
+                       CBTrueToneClient, DisplayServicesClient, KeyboardBrightnessClient ]
+...

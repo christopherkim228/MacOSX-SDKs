@@ -1,0 +1,31 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ x86_64-maccatalyst, arm64-maccatalyst, arm64e-maccatalyst ]
+uuids:
+  - target:          x86_64-maccatalyst
+    value:           E647AA84-A824-3133-9387-F1C049396A84
+  - target:          arm64-maccatalyst
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64e-maccatalyst
+    value:           C1C2C28E-80CB-344B-B3B0-343C72610C3A
+install-name:    '/System/iOSSupport/System/Library/Frameworks/SafariServices.framework/Versions/A/SafariServices'
+exports:
+  - targets:         [ x86_64-maccatalyst, arm64e-maccatalyst, arm64-maccatalyst ]
+    symbols:         [ _SFAuthenticationErrorDomain, _SFContentBlockerErrorDomain, 
+                       _SFErrorDomain, _SFExtensionMessageKey, _SSReadingListErrorDomain, 
+                       __SFAuthenticationContextDidInvalidateNotification, __SFAuthenticationContextErrorDomain, 
+                       __SFAuthenticationContextInvalidatedError, __SFAuthenticationContextNoTimeout, 
+                       __SFDeviceRegionCodeIsChina, __SFDeviceRegionCodeIsRussia, 
+                       __SFHighPrioritySecurityRecommendationCellReuseIdentifier, 
+                       __SFPreferredLanguagesIncludesAnyLanguage, __SFSearchEngineControllerDefaultSearchEngineDidChangeNotification, 
+                       __SFSearchEngineControllerInstanceDidFinishPopulatingSearchEnginesNotification, 
+                       __SFSearchEngineStringDefaultsKey, __SFShouldShowChineseFeatures, 
+                       __SFShouldShowRussianFeatures, __SFStandardSecurityRecommendationCellReuseIdentifier ]
+    objc-classes:    [ SFAuthenticationSession, SFContentBlockerManager, SFContentBlockerState, 
+                       SFSafariViewController, SFSafariViewControllerActivityButton, 
+                       SFSafariViewControllerConfiguration, SFSafariViewControllerPrewarmingToken, 
+                       SSReadingList, _SFAuthenticationContext, _SFEditablePasswordTableViewController, 
+                       _SFFeatureAvailability, _SFFormDataController, _SFPasswordAuditingViewController, 
+                       _SFPasswordIconController, _SFPasswordManagerLockedView, _SFPasswordPickerTableViewController, 
+                       _SFSearchEngineController, _SFSearchEngineInfo ]
+...

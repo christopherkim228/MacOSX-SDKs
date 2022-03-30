@@ -1,0 +1,19 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ x86_64-macos, arm64-macos, arm64e-macos ]
+uuids:
+  - target:          x86_64-macos
+    value:           F0FC9E64-A658-35DE-B081-296420BBD439
+  - target:          arm64-macos
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64e-macos
+    value:           A0D77F66-0613-33E4-8EC7-C4505699E5A6
+install-name:    '/System/Library/PrivateFrameworks/SetupAssistantFramework.framework/Versions/A/SetupAssistantFramework'
+exports:
+  - targets:         [ x86_64-macos, arm64e-macos, arm64-macos ]
+    symbols:         [ _SetupAssistantFrameworkVersionNumber, _SetupAssistantFrameworkVersionString, 
+                       _kMBSetupUserUID, _kSetupAssistantWindowDataKey, _kSetupAssistantWindowScreenNumberKey, 
+                       _kSetupAssistantWindowXPositionKey, _kSetupAssistantWindowYPositionKey, 
+                       _kSetupCompletedNotificationName ]
+    objc-classes:    [ SALauncher, SAUserSetupState ]
+...

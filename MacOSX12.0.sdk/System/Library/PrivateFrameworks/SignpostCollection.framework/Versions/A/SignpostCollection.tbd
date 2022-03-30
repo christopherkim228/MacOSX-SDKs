@@ -1,0 +1,27 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ x86_64-macos, x86_64-maccatalyst, arm64-macos, arm64-maccatalyst, 
+                   arm64e-macos, arm64e-maccatalyst ]
+uuids:
+  - target:          x86_64-macos
+    value:           5BB2F875-C884-309A-983F-CD1DB97284FE
+  - target:          x86_64-maccatalyst
+    value:           5BB2F875-C884-309A-983F-CD1DB97284FE
+  - target:          arm64-macos
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64-maccatalyst
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          arm64e-macos
+    value:           E4230AF3-3013-3ED8-9A38-8187DF19ACF7
+  - target:          arm64e-maccatalyst
+    value:           E4230AF3-3013-3ED8-9A38-8187DF19ACF7
+install-name:    '/System/Library/PrivateFrameworks/SignpostCollection.framework/Versions/A/SignpostCollection'
+current-version: 66
+exports:
+  - targets:         [ x86_64-maccatalyst, x86_64-macos, arm64e-maccatalyst, arm64e-macos, 
+                       arm64-macos, arm64-maccatalyst ]
+    symbols:         [ _SCCurrentTotalFrameCount, _SignpostPlatformForDevice, _SignpostPlatformForString, 
+                       _SignpostSystemTimebaseRatio, _StringForSignpostPlatform, 
+                       __signpostcollection_debug_log, _kSignpostNotification_NoTimeout ]
+    objc-classes:    [ SignpostSerializationFilterConfiguration, SignpostSupportObjectSerializer ]
+...

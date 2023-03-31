@@ -17,7 +17,7 @@ jobs:
     - run: git diff --exit-code releases.json && echo "FOUND_CHANGES=0" >> $GITHUB_ENV || echo "FOUND_CHANGES=1" >> $GITHUB_ENV
     - run: echo "LATEST_VERSION=$(jq -r -r '[.[]|select(.version.release.release)][0].version.number' releases.json)" >> $GITHUB_ENV
     - run: echo ${{ env.LATEST_VERSION }} > latest_version
-    - run: git diff --exit-code latest_version && echo "NEW_VERSION=0" >> $GITHUB_ENV || "NEW_VERSION=1" >> $GITHUB_ENV
+    - run: git diff --exit-code latest_version && echo "NEW_VERSION=0" >> $GITHUB_ENV || echo "NEW_VERSION=1" >> $GITHUB_ENV
     - uses: EndBug/add-and-commit@v7
       with:
         branch: data
